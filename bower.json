@@ -1,5 +1,5 @@
 {
-  "name": "angular-k",
+  "name": "angular-tpl",
   "description": "angular",
   "main": "index.js",
   "authors": [
@@ -23,6 +23,7 @@
     "bootstrap": "^3.3.6",
     "angular-ui-router": "ui-router#^0.2.18",
     "angular-animate": "^1.5.5",
-    "angular-touch": "^1.5.5"
+    "angular-touch": "^1.5.5",
+    "font-awesome": "fontawesome#^4.6.2"
   }
 }

@@ -1,9 +1,8 @@
-<div>
-    <div>头部</div>
-    <div>侧栏
-        <a ui-sref="main.module1({page:'node'})">node</a>
-        <a ui-sref="main.module2({page:'gulp'})">gulp</a>
+<div class="main">
+    <div class="header" ng-include="'view/header.html'"></div>
+    <div class="body">
+        <div class="side" ng-include="'view/side.html'"></div>
+        <div class="content" ui-view></div>
     </div>
-    <div ui-view></div>
-    <div>底部</div>
+    <div class="footer" ng-include="'view/footer.html'"></div>
 </div>

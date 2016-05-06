@@ -1,0 +1,45 @@
+<div class="wrap" ng-controller="side_ctrl">
+    <ul>
+        <li>
+            <a ui-sref="main.module1({page:'node'})">
+                <i class="fa fa-bar-chart"></i>
+                <span>NodeJS</span>
+            </a>
+        </li>
+
+        <li>
+            <a ng-init="gulp=false" ng-click="gulp=!gulp">
+                <i class="fa fa-bar-chart"></i>
+                <span>gulp简介</span>
+                <i class="pull-right fa" ng-class="{'fa-angle-right':!gulp,'fa-angle-down':gulp}"></i>
+                <span class="pull-right label bg-danger">2</span>
+            </a>
+        </li>
+
+        <ul class="drown-ul" ng-if="gulp">
+            <li>
+                <a ui-sref="main.module2({page:'gulp'})">
+                    <span>gulp简介</span>
+                </a>
+            </li>
+            <li>
+                <a ui-sref="main.module2({page:'gulp'})">
+                    <span>gulp安装</span>
+                </a>
+            </li>
+            <li>
+                <a ui-sref="main.module2({page:'gulp'})">
+                    <span>gulp API</span>
+                </a>
+            </li>
+        </ul>
+
+        <li>
+            <a ui-sref="main.module1({page:'node'})">
+                <i class="fa fa-bar-chart"></i>
+                <span>NodeJS</span>
+                <span class="pull-right label bg-info">9</span>
+            </a>
+        </li>
+    </ul>
+</div>

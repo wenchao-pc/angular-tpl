@@ -24,9 +24,14 @@ gulp.task("css", function () {
     gulp.src("./src/less/style.less")
         .pipe(less())
         .pipe(gulp.dest("./dist/css/"));
-    gulp.src("./bower_components/bootstrap/dist/css/bootstrap.min.css")
+    gulp.src([
+        "./bower_components/bootstrap/dist/css/bootstrap.min.css",
+        "./bower_components/font-awesome/css/font-awesome.min.css"
+    ])
         .pipe(concat("vendor.css"))
         .pipe(gulp.dest("./dist/css/"));
+    gulp.src("bower_components/font-awesome/fonts/**")
+        .pipe(gulp.dest("./dist/fonts/"));
 });
 
 //合并js
@@ -85,8 +90,8 @@ gulp.task("sync-init", function () {
     //浏览器自动刷新初始化
     browserSync.init({
         server: {
-            baseDir: './',
-            index: 'dist/index.html',
+            baseDir: './dist',
+            index: 'index.html',
             middleware: function (req, res, next) {
                 var ajaxUrl = /.do$|.no$/;
                 if (ajaxUrl.test(req.originalUrl)) {
