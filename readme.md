@@ -1,4 +1,4 @@
-##node 安装
+##node 安装 admin
 ###2016.04.27
 ```
 npm install gulp -g
